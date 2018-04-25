@@ -12,10 +12,14 @@
 	<body ng-controller="NotesCtrl as Notes">
 		<h1>{{Notes.title}}</h1>
 
-		<div class='keys' ng-model='note.black' ng-init='note.black = true'>
+		<div class='keys'>
 			<div class='black-keys'>
+				{{ Notes.blackNote }}
+				{{ Notes.keyStroke }}
 			</div>
 			<div class='white-keys'>
+				{{ Notes.whiteNote }}
+				{{ Notes.keyStroke }}
 			</div>
 		</div>
 	</body>
