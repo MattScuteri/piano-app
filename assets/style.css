@@ -1,12 +1,159 @@
+.header {
+	text-align: center;
+	font-family: 'Source Sans Prop', sans-serif;
+	font-size: 60px;
+}
+
+.staff {
+	text-align: center;
+}
+
+#staff-img {
+	height: 35%;
+	width: 35%;
+	padding-top: 30px;
+}
+
+.keys {
+	height: 50%;
+	width: 50%;
+	margin: auto;
+	text-align: center;
+	font-family: 'Source Sans Prop', sans-serif;
+}
+
 .white-keys {
-	width: 7%;
-	height: 50px;
-	background-color: #F9EBEA;
+	display: flex;
+	flex-wrap: 'wrap';
+	float: left;
+	position: fixed;
+	bottom: 10px;
+	z-index: -1;
 }
 
 .black-keys {
-	width: 5%;
-	height: 25px;
+	display: flex;
+	flex-wrap: 'wrap';
+	float: left;
+	position: fixed;
+	bottom: 135px;
+}
+
+#C {
+	width: 100px;
+	height: 250px;
+	background-color: #F9EBEA;
+	border-style: solid;
+	border-width: 3px;
+}
+
+#D {
+	width: 100px;
+	height: 250px;
+	background-color: #F9EBEA;
+	border-style: solid;
+	border-width: 3px;
+}
+
+#E {
+	width: 100px;
+	height: 250px;
+	background-color: #F9EBEA;
+	border-style: solid;
+	border-width: 3px;
+}
+
+#F {
+	width: 100px;
+	height: 250px;
+	background-color: #F9EBEA;
+	border-style: solid;
+	border-width: 3px;
+}
+
+#G {
+	width: 100px;
+	height: 250px;
+	background-color: #F9EBEA;
+	border-style: solid;
+	border-width: 3px;
+}
+
+#A {
+	width: 100px;
+	height: 250px;
+	background-color: #F9EBEA;
+	border-style: solid;
+	border-width: 3px;
+}
+
+#B {
+	width: 100px;
+	height: 250px;
+	background-color: #F9EBEA;
+	border-style: solid;
+	border-width: 3px;
+}
+
+#C2 {
+	width: 100px;
+	height: 250px;
+	background-color: #F9EBEA;
+	border-style: solid;
+	border-width: 3px;
+}
+
+#Csharp {
+	width: 50px;
+	height: 125px;
+	margin-left: 75px;
 	background-color: #000000;
 	color: white;
+	border-style: solid;
+	border-width: 3px;
+	border-color: white;	
+}
+
+#Dsharp {
+	width: 50px;
+	height: 125px;
+	margin-left: 50px;
+	background-color: #000000;
+	color: white;
+	border-style: solid;
+	border-width: 3px;
+	border-color: white;
+}
+
+#Fsharp {
+	width: 50px;
+	height: 125px;
+	margin-left: 160px;
+	background-color: #000000;
+	color: white;
+	border-style: solid;
+	border-width: 3px;
+	border-color: white;
+}
+
+#Gsharp {
+	width: 50px;
+	height: 125px;
+	margin-left: 50px;
+	background-color: #000000;
+	color: white;
+	border-style: solid;
+	border-width: 3px;
+	border-color: white;
+}
+
+#Asharp {
+	width: 50px;
+	height: 125px;
+	background-color: #000000;
+	margin-left: 50px;
+	color: white;
+	border-style: solid;
+	border-width: 3px;
+	border-color: white;
 }
