@@ -18,7 +18,6 @@
 	height: 50%;
 	width: 50%;
 	margin: auto;
-	text-align: center;
 	font-family: 'Source Sans Prop', sans-serif;
 }
 
@@ -29,6 +28,7 @@
 	position: fixed;
 	bottom: 10px;
 	z-index: -1;
+	text-align: center;
 }
 
 .black-keys {
@@ -46,6 +46,14 @@
 	border-style: solid;
 	border-width: 3px;
 }
+
+	#C p {
+		position: absolute;
+		bottom: 0;
+		font-weight: bold;
+		font-size: 40px;
+		text-align: center;
+	}
 
 #D {
 	width: 100px;
