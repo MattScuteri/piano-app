@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html ng-app="Piano">
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+		<script src="../app.js"></script>
+		<script src="../components/keyComponent.js"></script>
+		<link rel='stylesheet' href='../assets/style.css'>
+		<title>Keyboard Piano</title>
+	</head>
+
+	<body ng-controller="NotesCtrl as Notes">
+		<h1>{{Notes.title}}</h1>
+
+		<div class='keys' ng-model='note.black' ng-init='note.black = true'>
+			<div class='black-keys'>
+			</div>
+			<div class='white-keys'>
+			</div>
+		</div>
+	</body>
+</html>

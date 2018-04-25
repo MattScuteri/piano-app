@@ -1,0 +1,12 @@
+.white-keys {
+	width: 7%;
+	height: 50px;
+	background-color: #F9EBEA;
+}
+
+.black-keys {
+	width: 5%;
+	height: 25px;
+	background-color: #000000;
+	color: white;
+}
