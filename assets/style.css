@@ -28,7 +28,6 @@
 	position: fixed;
 	bottom: 10px;
 	z-index: -1;
-	text-align: center;
 }
 
 .black-keys {
@@ -42,6 +41,7 @@
 #C {
 	width: 100px;
 	height: 250px;
+	position: relative;
 	background-color: #F9EBEA;
 	border-style: solid;
 	border-width: 3px;
@@ -51,69 +51,133 @@
 		position: absolute;
 		bottom: 0;
 		font-weight: bold;
-		font-size: 40px;
-		text-align: center;
+		font-size: 50px;
+		padding-left: 35px;
 	}
 
 #D {
 	width: 100px;
 	height: 250px;
+	position: relative;
 	background-color: #F9EBEA;
 	border-style: solid;
 	border-width: 3px;
 }
+
+	#D p {
+		position: absolute;
+		bottom: 0;
+		font-weight: bold;
+		font-size: 50px;
+		padding-left: 35px;
+	}
 
 #E {
 	width: 100px;
 	height: 250px;
+	position: relative;
 	background-color: #F9EBEA;
 	border-style: solid;
 	border-width: 3px;
 }
+
+	#E p {
+		position: absolute;
+		bottom: 0;
+		font-weight: bold;
+		font-size: 50px;
+		padding-left: 35px;
+	}
 
 #F {
 	width: 100px;
 	height: 250px;
+	position: relative;
 	background-color: #F9EBEA;
 	border-style: solid;
 	border-width: 3px;
 }
+
+	#F p {
+		position: absolute;
+		bottom: 0;
+		font-weight: bold;
+		font-size: 50px;
+		padding-left: 35px;
+	}
 
 #G {
 	width: 100px;
 	height: 250px;
+	position: relative;
 	background-color: #F9EBEA;
 	border-style: solid;
 	border-width: 3px;
 }
+
+	#G p {
+		position: absolute;
+		bottom: 0;
+		font-weight: bold;
+		font-size: 50px;
+		padding-left: 35px;
+	}
 
 #A {
 	width: 100px;
 	height: 250px;
+	position: relative;
 	background-color: #F9EBEA;
 	border-style: solid;
 	border-width: 3px;
 }
+
+	#A p {
+		position: absolute;
+		bottom: 0;
+		font-weight: bold;
+		font-size: 50px;
+		padding-left: 35px;
+	}
 
 #B {
 	width: 100px;
 	height: 250px;
+	position: relative;
 	background-color: #F9EBEA;
 	border-style: solid;
 	border-width: 3px;
 }
+
+	#B p {
+		position: absolute;
+		bottom: 0;
+		font-weight: bold;
+		font-size: 50px;
+		padding-left: 35px;
+	}
 
 #C2 {
 	width: 100px;
 	height: 250px;
+	position: relative;
 	background-color: #F9EBEA;
 	border-style: solid;
 	border-width: 3px;
 }
 
+	#C2 p {
+		position: absolute;
+		bottom: 0;
+		font-weight: bold;
+		font-size: 50px;
+		padding-left: 35px;
+	}
+
 #Csharp {
 	width: 50px;
 	height: 125px;
+	position: relative;
 	margin-left: 75px;
 	background-color: #000000;
 	color: white;
@@ -122,9 +186,18 @@
 	border-color: white;	
 }
 
+	#Csharp p {
+		position: absolute;
+		bottom: 0;
+		font-weight: bold;
+		font-size: 30px;
+		padding-left: 10px;
+	}
+
 #Dsharp {
 	width: 50px;
 	height: 125px;
+	position: relative;
 	margin-left: 50px;
 	background-color: #000000;
 	color: white;
@@ -133,9 +206,18 @@
 	border-color: white;
 }
 
+	#Dsharp p {
+		position: absolute;
+		bottom: 0;
+		font-weight: bold;
+		font-size: 30px;
+		padding-left: 10px;
+	}
+
 #Fsharp {
 	width: 50px;
 	height: 125px;
+	position: relative;
 	margin-left: 160px;
 	background-color: #000000;
 	color: white;
@@ -144,9 +226,18 @@
 	border-color: white;
 }
 
+	#Fsharp p {
+		position: absolute;
+		bottom: 0;
+		font-weight: bold;
+		font-size: 30px;
+		padding-left: 10px;
+	}
+
 #Gsharp {
 	width: 50px;
 	height: 125px;
+	position: relative;
 	margin-left: 50px;
 	background-color: #000000;
 	color: white;
@@ -155,9 +246,18 @@
 	border-color: white;
 }
 
+	#Gsharp p {
+		position: absolute;
+		bottom: 0;
+		font-weight: bold;
+		font-size: 30px;
+		padding-left: 10px;
+	}
+
 #Asharp {
 	width: 50px;
 	height: 125px;
+	position: relative;
 	background-color: #000000;
 	margin-left: 50px;
 	color: white;
@@ -165,3 +265,11 @@
 	border-width: 3px;
 	border-color: white;
 }
+
+	#Asharp p {
+		position: absolute;
+		bottom: 0;
+		font-weight: bold;
+		font-size: 30px;
+		padding-left: 10px;
+	}
