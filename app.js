@@ -51,5 +51,5 @@ const app = angular.module('Piano', [])
  					break;
  			};
  		});
- 	})
-});
+ 	}
+ });
