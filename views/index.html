@@ -6,6 +6,7 @@
 		<script src="../app.js"></script>
 		<script src="../components/keyComponent.js"></script>
 		<script src="http://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+		<script src='../assets/script.js'></script>
 		<link rel='stylesheet' href='../assets/style.css'>
 		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 		<title>Keyboard Piano</title>
@@ -20,47 +21,21 @@
 
 		<div class='keys'>
 			<div class='black-keys'>
-				<div id='Csharp'>
-					<p>W</p>
-				</div>
-				<div id='Dsharp'>
-					<p>E</p>
-				</div>
-				<div id='Fsharp'>
-					<p>T</p>
-				</div>
-				<div id='Gsharp'>
-					<p>Y</p>
-				</div>
-				<div id='Asharp'>
-					<p>U</p>
-				</div>
+				<button data-note='Csharp' id='Csharp' ng-click='keyPress($event)'></button>
+				<button data-note='Dsharp' id='Dsharp' ng-click='keyPress($event)'></button>
+				<button data-note='Fsharp' id='Fsharp' ng-click='keyPress($event)'></button>
+				<button data-note='Gsharp' id='Gsharp' ng-click='keyPress($event)'></button>
+				<button data-note='Asharp' id='Asharp' ng-click='keyPress($event)'></button>
 			</div>
 			<div class='white-keys'>
-				<div id='C'>
-					<p>A</p>
-				</div>
-				<div id='D'>
-					<p>S</p>
-				</div>
-				<div id='E'>
-					<p>D</p>
-				</div>
-				<div id='F'>
-					<p>F</p>
-				</div>
-				<div id='G'>
-					<p>G</p>
-				</div>
-				<div id='A'>
-					<p>H</p>
-				</div>
-				<div id='B'>
-					<p>J</p>
-				</div>
-				<div id='C2'>
-					<p>K</p>
-				</div>
+				<button data-note='C' id='C' ng-click='keyPress($event)'></button>
+				<button data-note='D' id='D' ng-click='keyPress($event)'></button>
+				<button data-note='E' id='E' ng-click='keyPress($event)'></button>
+				<button data-note='F' id='F' ng-click='keyPress($event)'></button>
+				<button data-note='G' id='G' ng-click='keyPress($event)'></button>
+				<button data-note='A' id='A' ng-click='keyPress($event)'></button>
+				<button data-note='B' id='B' ng-click='keyPress($event)'></button>
+				<button data-note='C2' id='C2' ng-click='keyPress($event)'></button>
 			</div>
 		</div>
 	</body>
