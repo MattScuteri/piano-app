@@ -21,14 +21,8 @@ var NotesCtrl = function($scope, $http) {
 			$scope.noteSelected.push(note);
 		});
 		
-		//$scope.noteSelected = $scope.noteSelected.splice(0);
-		
-		$("#testRepeats").html("<div ng-repeat='x in records'>{{x}}</div>");
-		console.log("Jessica Alba");
-		console.log($scope);
 		console.log($scope.noteSelected);		
  	}
-
 
 	$(window).on('keydown', function($event) {
 		const noteLookup = {
@@ -78,13 +72,7 @@ var NotesCtrl = function($scope, $http) {
 			playNote(noteLookup[$event.which].note);
 		}
 	})
-	if(typeof $scope.note == 'undefined'){
-		$scope.noteSelected = ["test"];
-	}
-	
-	debugV = $scope.noteSelected;
-	$scope.testNote = "n";
-	$scope.records = ["bizarre", "How bizarre?"];
+	$scope.noteSelected = [];
 };
 
 angular.module('Piano').controller('NotesCtrl', ['$scope', '$http', NotesCtrl]);
