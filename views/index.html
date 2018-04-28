@@ -12,13 +12,19 @@
 		<title>Keyboard Piano</title>
 	</head>
 
-	<body ng-controller="NotesCtrl as Notes">
+	<body id='note-array' ng-controller="NotesCtrl as Notes">
 		<h1 class='header'>{{Notes.title}}</h1>
-
+		<div class="test">{{Notes.testNote}}</div>
 		<div class='staff'>
 			<img  id='staff-img' src='../assets/imgs/staff.jpg' alt='staff'>
-			<div  ng-repeat='musicNotes in noteSelected'>
-				<div>{{musicNotes}}</div>
+			<div ng-repeat='x in noteSelected'>
+				{{x}}
+			</div>
+			<div ng-repeat='x in records'>
+				{{x}}
+			</div>
+			<div id="testRepeats">
+				
 			</div>
 		</div>
 
