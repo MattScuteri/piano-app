@@ -1,69 +1,83 @@
-angular.module('Piano').controller('NotesCtrl', NotesCtrl);
 
-NotesCtrl.$inject = ['$scope', '$http'];
-
-function NotesCtrl($scope, $http) {
+var debugV = null;
+var NotesCtrl = function($scope, $http) {
 	var vm = this;
 	vm.title = 'Keyboard Piano'
 
 	$scope.keyPress = function($event) {
-		$('button').on('click', function() {
-			let note = $(this).data('note');
-			console.log(note);
-		})
-		// const keyCode = $event.which || $event.keyCode;
-		// if (keyCode === 65) {
-		// 	console.log('C');
-		// }
+		let note = $($event.target).data('note');
+		playNote(note);
 
- 		// $('.white-keys').keydown(function(e) {
- 		// 	switch(e) {
- 		// 		case (e.keyCode === 65):
- 		// 			console.log('C')
- 		// 			break;
-			// 	case (e.keyCode === 83):
- 		// 			console.log('D')
-			// 		break;
- 		// 		case (e.keyCode === 68):
- 		// 			console.log('E')
- 		// 			break;
- 		// 		case (e.keyCode === 70):
- 		// 			console.log('F')
- 		// 			break;
- 		// 		case (e.keyCode === 71):
- 		// 			console.log('G')
- 		// 			break;
- 		// 		case (e.keyCode === 72):
- 		// 			console.log('A')
-			// 		break;
- 		// 		case (e.keyCode === 74):
- 		// 			console.log('B')
- 		// 			break;
- 		// 		case (e.keyCode === 75):
- 		// 			console.log('C')
- 		// 			break;
- 		// 		default: null;
- 		// 	};
- 		// })
- 		// $('.black-keys').keydown(function(e) {
- 		// 	switch(e) {
- 		// 		case (e.keyCode === 87):
- 		// 			console.log('C#')
- 		// 			break;
- 		// 		case (e.keyCode === 69):
- 		// 			console.log('D#');
- 		// 			break;
- 		// 		case (e.keyCode === 84):
- 		// 			console.log('F#')
- 		// 			break;
- 		// 		case (e.keyCode === 89):
- 		// 			console.log('G#')
- 		// 			break;
- 		// 		case (e.keyCode === 85):
- 		// 			console.log('A#')
- 		// 			break;
- 		// 		default: null;
- 		// 	};
- 		// });
  	}
+
+ 	function playNote(note) {
+		let audio = $(`audio[data-note="${note}"]`);
+
+		if (!audio[0]) return;
+
+		audio[0].currentTime = 0;
+		audio[0].play();
+		$scope.noteSelected.push(note);
+		$scope.noteSelected = $scope.noteSelected;
+		console.log("Jessica Alba");
+		console.log($scope);
+		console.log($scope.noteSelected);		
+ 	}
+
+
+	$(window).on('keydown', function($event) {
+		const noteLookup = {
+			65: {
+				note: 'C',
+			},
+			87: {
+				note: 'Csharp'
+			},
+			83: {
+				note: 'D',
+			},
+			69: {
+				note: 'Dsharp',
+			},
+			68: {
+				note: 'E',
+			},
+			70: {
+				note: 'F',
+			},
+			84: {
+				note: 'Fsharp',
+			},
+			71: {
+				note: 'G',
+			},
+			89: {
+				note: 'Gsharp',
+			},
+			72: {
+				note: 'A',
+			},
+			85: {
+				note: 'Asharp',
+			},
+			74: {
+				note: 'B'
+			},
+			75: {
+				note: 'C2',
+			},
+		};
+
+		if (noteLookup[$event.which]) {
+			console.log(noteLookup[$event.which])
+			playNote(noteLookup[$event.which].note);
+		}
+	})
+
+	$scope.noteSelected = [];
+	debugV = $scope.noteSelected;
 };
+
+angular.module('Piano').controller('NotesCtrl', ['$scope', '$http', NotesCtrl]);
+
+// NotesCtrl.$inject = ['$scope', '$http'];
