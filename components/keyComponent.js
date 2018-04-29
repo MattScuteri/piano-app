@@ -1,5 +1,3 @@
-
-var debugV = null;
 var NotesCtrl = function($scope, $http) {
 	var vm = this;
 	vm.title = 'Keyboard Piano'
@@ -18,10 +16,10 @@ var NotesCtrl = function($scope, $http) {
 		audio[0].currentTime = 0;
 		audio[0].play();
 		$scope.$apply(function(){
-			$scope.noteSelected.push(note);
-		});
+			$scope.noteSelected.push($scope.noteSelected.length + note);		
+		});	
 		
-		console.log($scope.noteSelected);		
+		console.log($scope.noteSelected);
  	}
 
 	$(window).on('keydown', function($event) {
@@ -73,6 +71,10 @@ var NotesCtrl = function($scope, $http) {
 		}
 	})
 	$scope.noteSelected = [];
+
+	function clearStaff($event) {
+		return $scope.noteSelected.length = 0;
+	}
 };
 
 angular.module('Piano').controller('NotesCtrl', ['$scope', '$http', NotesCtrl]);

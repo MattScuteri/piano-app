@@ -16,29 +16,35 @@
 		<h1 class='header'>{{Notes.title}}</h1>
 		<div class="test">{{Notes.testNote}}</div>
 		<div class='staff'>
-			<img  id='staff-img' src='../assets/imgs/staff.jpg' alt='staff'>
-			<div ng-repeat='x in noteSelected'>
-				{{x}}
+			<img  id='staff-img' src='../assets/imgs/staff.gif' alt='staff'>
+			<div ng-repeat='notes in noteSelected'>
+				<img class='quarternote' ng-src='../assets/imgs/quarternote.png' id='{{notes}}'>
 			</div>		
+		</div>
+
+		<div class='button-row'>
+			<button id='play'>Play</button>
+			<button id='save'>Save</button>
+			<button id='clear' ng-click='clearStaff($event)'>Clear</button>
 		</div>
 
 		<div class='keys' ng-keypress='$scope.handleKeyPress($event)'>
 			<div class='black-keys'>
-				<button data-note='Csharp' id='Csharp' ng-click='keyPress($event)'>
+				<div data-note='Csharp' id='Csharp'>
 					<p>W</p>
-				</button>
-				<button data-note='Dsharp' id='Dsharp' ng-click='keyPress($event)'>
+				</div>
+				<div data-note='Dsharp' id='Dsharp'>
 					<p>E</p>
-				</button>
-				<button data-note='Fsharp' id='Fsharp' ng-click='keyPress($event)'>
+				</div>
+				<div data-note='Fsharp' id='Fsharp'>
 					<p>T</p>
-				</button>
-				<button data-note='Gsharp' id='Gsharp' ng-click='keyPress($event)'>
+				</div>
+				<div data-note='Gsharp' id='Gsharp'>
 					<p>Y</p>
-				</button>
-				<button data-note='Asharp' id='Asharp' ng-click='keyPress($event)'>
+				</div>
+				<div data-note='Asharp' id='Asharp'>
 					<p>U</p>
-				</button>
+				</div>
 
 				<audio data-note='Csharp' src='../assets/sounds/Piano12.mp3'></audio>
 				<audio data-note='Dsharp' src='../assets/sounds/Piano14.mp3'></audio>
@@ -47,23 +53,30 @@
 				<audio data-note='Asharp' src='../assets/sounds/Piano111.mp3'></audio>
 			</div>
 			<div class='white-keys'>
-				<button data-note='C' id='C' ng-click='keyPress($event)'>	<p>A</p>
-				</button>
-				<button data-note='D' id='D' ng-click='keyPress($event)'>	<p>S</p>
-				</button>
-				<button data-note='E' id='E' ng-click='keyPress($event)'>	<p>D</p>
-				</button>
-				<button data-note='F' id='F' ng-click='keyPress($event)'>	<p>F</p>
-				</button>
-				<button data-note='G' id='G' ng-click='keyPress($event)'>	<p>G</p>
-				</button>
-				<button data-note='A' id='A' ng-click='keyPress($event)'>	<p>H</p>
-				</button>
-				<button data-note='B' id='B' ng-click='keyPress($event)'>	<p>J</p>
-				</button>
-				<button data-note='C2' id='C2' ng-click='keyPress($event)'>
+				<div data-note='C' id='C'>
+					<p>A</p>
+				</div>
+				<div data-note='D' id='D'>
+					<p>S</p>
+				</div>
+				<div data-note='E' id='E'>
+					<p>D</p>
+				</div>
+				<div data-note='F' id='F'>
+					<p>F</p>
+				</div>
+				<div data-note='G' id='G'>
+					<p>G</p>
+				</div>
+				<div data-note='A' id='A'>
+					<p>H</p>
+				</div>
+				<div data-note='B' id='B'>
+					<p>J</p>
+				</div>
+				<div data-note='C2' id='C2'>
 					<p>K</p>
-				</button>
+				</div>
 
 				<audio data-note='C' src='../assets/sounds/Piano11.mp3'></audio>
 				<audio data-note='D' src='../assets/sounds/Piano13.mp3'></audio>
