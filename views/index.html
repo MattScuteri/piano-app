@@ -16,8 +16,10 @@
 		<h1 class='header'>{{Notes.title}}</h1>
 		<div class='staff'>
 			<img  id='staff-img' src='../assets/imgs/staff.gif' alt='staff'>
-			<div ng-repeat='notes in noteSelected'>
-				<img class='quarternote' ng-src='../assets/imgs/quarternote.png' id='{{notes}}'>
+			<div class="composition">
+				<div ng-repeat='notes in noteSelected'>
+					<img class='quarternote' ng-src='../assets/imgs/quarternote.png' id='played{{notes}}'>
+				</div>
 			</div>		
 		</div>
 

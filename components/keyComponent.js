@@ -77,12 +77,16 @@ var NotesCtrl = function($scope, $http) {
 	}
 
 	$scope.playComposition = function(note) {
-		for (let i = 0; i < $scope.noteSelected.length; i++) {
-			let score = $scope.noteSelected[i];
-			let audio = $(`audio[data-note="${note}"]`);
+		console.log($scope.noteSelected)
 
-			audio[0].play(score);
-		}
+		for (let i = 0; i < $scope.noteSelected; i++) {
+			let sound = $('audio').data('note');
+
+			if (sound === $scope.noteSelected[i]) {
+				sound.play();
+			};
+		};
+
 	}
 };
 
