@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3000;
 
 const db = require('./models');
 
-app.use(bodyParser.urlEncoded( { extended: false }));
+app.use(bodyParser.urlEncoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
