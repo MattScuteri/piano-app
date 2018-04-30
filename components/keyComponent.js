@@ -16,7 +16,7 @@ var NotesCtrl = function($scope, $http) {
 		audio[0].currentTime = 0;
 		audio[0].play();
 		$scope.$apply(function(){
-			$scope.noteSelected.push($scope.noteSelected.length + note);		
+			$scope.noteSelected.push(note);		
 		});	
 		
 		console.log($scope.noteSelected);
@@ -72,8 +72,17 @@ var NotesCtrl = function($scope, $http) {
 	})
 	$scope.noteSelected = [];
 
-	function clearStaff($event) {
-		return $scope.noteSelected.length = 0;
+	$scope.clearStaff = function() {
+		$scope.noteSelected = [];					
+	}
+
+	$scope.playComposition = function(note) {
+		for (let i = 0; i < $scope.noteSelected.length; i++) {
+			let score = $scope.noteSelected[i];
+			let audio = $(`audio[data-note="${note}"]`);
+
+			audio[0].play(score);
+		}
 	}
 };
 
