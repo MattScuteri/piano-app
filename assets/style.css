@@ -4,15 +4,9 @@
 	font-size: 60px;
 }
 
-.staff {
-	text-align: center;
-}
-
-#staff-img {
-	height: 35%;
-	width: 45%;
-	padding-top: 30px;
-	z-index: -1;
+.composition {
+	position: fixed;
+	transform: translateX(440px);
 }
 
 .quarternote {
@@ -23,19 +17,84 @@
 	float: left;
 }
 
-.composition {
-	position: relative;
-	transform: translateX(190px);
+[data-note='C'] {
+	transform: translateY(60px);
+	z-index: 1;
 }
 
-#playedC {
-	transform: translateY(-100px);
+[data-note='Csharp'] {
+	transform: translateY(60px);
 	z-index: 1;
+	background-image: url('./imgs/sharp.png') 5% left bottom
+}
+
+[data-note='D'] {
+	transform: translateY(50px);
+	z-index: 1;
+}
+
+[data-note='Dsharp'] {
+	transform: translateY(50px);
+	z-index: 1;
+}
+
+[data-note='E'] {
+	transform: translateY(40px);
+	z-index: 1;
+}
+
+[data-note='F'] {
+	transform: translateY(30px);
+	z-index: 1;
+}
+
+[data-note='Fsharp'] {
+	transform: translateY(30px);
+	z-index: 1;
+}
+
+[data-note='G'] {
+	transform: translateY(20px);
+	z-index: 1;
+}
+
+[data-note='Gsharp'] {
+	transform: translateY(20px);
+	z-index: 1;
+}
+
+[data-note='A'] {
+	transform: translateY(10px);
+	z-index: 1;
+}
+
+[data-note='Asharp'] {
+	transform: translateY(10px);
+	z-index: 1;
+}
+
+[data-note='B'] {
+	transform: translateY(-5px);
+	z-index: 1;
+}
+
+[data-note='C2'] {
+	transform: translateY(-13px);
+	z-index: 1;
+}
+
+.staff {
+	text-align: center;
+}
+
+#staff-img {
+	height: 35%;
+	width: 45%;
+	z-index: -1;
 }
 
 .button-row {
 	text-align: center;
-	position: absolute;
 	z-index: -1;
 }
 

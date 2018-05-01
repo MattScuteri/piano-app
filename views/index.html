@@ -14,13 +14,13 @@
 
 	<body id='note-array' ng-controller="NotesCtrl as Notes">
 		<h1 class='header'>{{Notes.title}}</h1>
-		<div class='staff'>
-			<img  id='staff-img' src='../assets/imgs/staff.gif' alt='staff'>
-			<div class="composition">
-				<div ng-repeat='notes in noteSelected'>
-					<img class='quarternote' ng-src='../assets/imgs/quarternote.png' id='played{{notes}}'>
-				</div>
-			</div>		
+		<div class="composition">
+			<div ng-repeat='notes in noteSelected'>
+				<img class='quarternote' data-note='{{notes}}' ng-src='../assets/imgs/quarternote.png'>
+			</div>
+		</div>
+		<div class='staff'>				
+			<img  id='staff-img' src='../assets/imgs/staff.gif' alt='staff'>	
 		</div>
 
 		<div class='button-row'>
@@ -31,19 +31,19 @@
 
 		<div class='keys'>
 			<div class='black-keys'>
-				<div data-note='Csharp' id='Csharp'>
+				<div id='Csharp'>
 					<p>W</p>
 				</div>
-				<div data-note='Dsharp' id='Dsharp'>
+				<div id='Dsharp'>
 					<p>E</p>
 				</div>
-				<div data-note='Fsharp' id='Fsharp'>
+				<div id='Fsharp'>
 					<p>T</p>
 				</div>
-				<div data-note='Gsharp' id='Gsharp'>
+				<div id='Gsharp'>
 					<p>Y</p>
 				</div>
-				<div data-note='Asharp' id='Asharp'>
+				<div id='Asharp'>
 					<p>U</p>
 				</div>
 
@@ -54,28 +54,28 @@
 				<audio data-note='Asharp' src='../assets/sounds/Piano111.mp3'></audio>
 			</div>
 			<div class='white-keys'>
-				<div data-note='C' id='C'>
+				<div id='C'>
 					<p>A</p>
 				</div>
-				<div data-note='D' id='D'>
+				<div id='D'>
 					<p>S</p>
 				</div>
-				<div data-note='E' id='E'>
+				<div id='E'>
 					<p>D</p>
 				</div>
-				<div data-note='F' id='F'>
+				<div id='F'>
 					<p>F</p>
 				</div>
-				<div data-note='G' id='G'>
+				<div id='G'>
 					<p>G</p>
 				</div>
-				<div data-note='A' id='A'>
+				<div id='A'>
 					<p>H</p>
 				</div>
-				<div data-note='B' id='B'>
+				<div id='B'>
 					<p>J</p>
 				</div>
-				<div data-note='C2' id='C2'>
+				<div id='C2'>
 					<p>K</p>
 				</div>
 
