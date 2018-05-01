@@ -25,7 +25,6 @@
 [data-note='Csharp'] {
 	transform: translateY(60px);
 	z-index: 1;
-	background-image: url('./imgs/sharp.png') 5% left bottom
 }
 
 [data-note='D'] {
