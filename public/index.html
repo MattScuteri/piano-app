@@ -3,11 +3,11 @@
 <html ng-app="Piano">
 	<head>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-		<script src="../app.js"></script>
-		<script src="../components/keyComponent.js"></script>
+		<script src="app.js"></script>
+		<script src="components/keyComponent.js"></script>
 		<script src="http://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-		<script src='../assets/script.js'></script>
-		<link rel='stylesheet' href='../assets/style.css'>
+		<script src='assets/script.js'></script>
+		<link rel='stylesheet' href='assets/style.css'>
 		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 		<title>Keyboard Piano</title>
 	</head>
@@ -16,16 +16,16 @@
 		<h1 class='header'>{{Notes.title}}</h1>
 		<div class="composition">
 			<div ng-repeat='notes in noteSelected'>
-				<img class='quarternote' data-note='{{notes}}' ng-src='../assets/imgs/quarternote.png'>
+				<img class='quarternote' data-note='{{notes}}' ng-src='assets/imgs/quarternote.png'>
 			</div>
 		</div>
 		<div class='staff'>				
-			<img  id='staff-img' src='../assets/imgs/staff.gif' alt='staff'>	
+			<img  id='staff-img' src='assets/imgs/staff.gif' alt='staff'>	
 		</div>
 
 		<div class='button-row'>
-			<button id='play' ng-click='playComposition()'>Play</button>
-			<button id='save'>Save</button>
+			<button id='play' ng-click='play()'>Play</button>
+			<button id='save' ng-click='save()'>Save</button>
 			<button id='clear' ng-click='clearStaff()'>Clear</button>
 		</div>
 
@@ -47,11 +47,11 @@
 					<p>U</p>
 				</div>
 
-				<audio data-note='Csharp' src='../assets/sounds/Piano12.mp3'></audio>
-				<audio data-note='Dsharp' src='../assets/sounds/Piano14.mp3'></audio>
-				<audio data-note='Fsharp' src='../assets/sounds/Piano17.mp3'></audio>
-				<audio data-note='Gsharp' src='../assets/sounds/Piano19.mp3'></audio>
-				<audio data-note='Asharp' src='../assets/sounds/Piano111.mp3'></audio>
+				<audio data-note='Csharp' src='assets/sounds/Piano12.mp3'></audio>
+				<audio data-note='Dsharp' src='assets/sounds/Piano14.mp3'></audio>
+				<audio data-note='Fsharp' src='assets/sounds/Piano17.mp3'></audio>
+				<audio data-note='Gsharp' src='assets/sounds/Piano19.mp3'></audio>
+				<audio data-note='Asharp' src='assets/sounds/Piano111.mp3'></audio>
 			</div>
 			<div class='white-keys'>
 				<div id='C'>
@@ -79,14 +79,14 @@
 					<p>K</p>
 				</div>
 
-				<audio data-note='C' src='../assets/sounds/Piano11.mp3'></audio>
-				<audio data-note='D' src='../assets/sounds/Piano13.mp3'></audio>
-				<audio data-note='E' src='../assets/sounds/Piano15.mp3'></audio>
-				<audio data-note='F' src='../assets/sounds/Piano16.mp3'></audio>
-				<audio data-note='G' src='../assets/sounds/Piano18.mp3'></audio>
-				<audio data-note='A' src='../assets/sounds/Piano110.mp3'></audio>
-				<audio data-note='B' src='../assets/sounds/Piano112.mp3'></audio>
-				<audio data-note='C2' src='../assets/sounds/Piano113.mp3'></audio>
+				<audio data-note='C' src='assets/sounds/Piano11.mp3'></audio>
+				<audio data-note='D' src='assets/sounds/Piano13.mp3'></audio>
+				<audio data-note='E' src='assets/sounds/Piano15.mp3'></audio>
+				<audio data-note='F' src='assets/sounds/Piano16.mp3'></audio>
+				<audio data-note='G' src='assets/sounds/Piano18.mp3'></audio>
+				<audio data-note='A' src='assets/sounds/Piano110.mp3'></audio>
+				<audio data-note='B' src='assets/sounds/Piano112.mp3'></audio>
+				<audio data-note='C2' src='assets/sounds/Piano113.mp3'></audio>
 			</div>
 		</div>
 	</body>

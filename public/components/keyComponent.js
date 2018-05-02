@@ -76,18 +76,30 @@ var NotesCtrl = function($scope, $http) {
 		$scope.noteSelected = [];					
 	}
 
-	$scope.playComposition = function(note) {
-		console.log($scope.noteSelected)
+	$scope.timeoutIds = [];
 
-		for (let i = 0; i < $scope.noteSelected; i++) {
-			let sound = $('audio').data('note');
+	$scope.play = function() {
+		const timeInterval = 350;
 
-			if (sound === $scope.noteSelected[i]) {
-				sound.play();
-			};
-		};
+		for (let i = 0; i < $scope.noteSelected.length; i++) {
+			console.log(i);
+			let sound = $(`audio[data-note="${$scope.noteSelected[i]}"`)
+			console.log(sound)
+			$scope.timeoutIds.push(
+				setTimeout(function() {
+					sound[0].play();
+				}, timeInterval * i)
+			);
+		}
+	};
 
+	$scope.save = function() {
+		$http.post('/')
+			.then(function(response) {
+				Song: $scope.noteSelected;
+			})
 	}
+
 };
 
 angular.module('Piano').controller('NotesCtrl', ['$scope', '$http', NotesCtrl]);

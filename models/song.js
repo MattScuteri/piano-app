@@ -1,13 +1,12 @@
-module.exports = function(sequelize, Datatypes) {
-	const Song = Sequelize.define('Song', {
-		music: DataTypes.ARRAY
-	});
+const Sequelize = require('sequelize');
+const sequelize = require('../config/connection.js');
 
-	Song.associate = function(models) {
-		Song.hasMany(models.Post, {
-			onDelete: 'cascade'
+module.exports = function(sequelize, Datatypes) {
+	const Song = sequelize.define('Song', {
+		music: {
+			type: Datatypes.STRING
+			}
 		});
-	};
 
 	return Song;
 }

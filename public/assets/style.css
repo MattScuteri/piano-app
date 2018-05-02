@@ -1,7 +1,12 @@
+body {
+	background-image: url('./imgs/pianobackground.jpg');
+}
+
 .header {
 	text-align: center;
 	font-family: 'Source Sans Prop', sans-serif;
 	font-size: 60px;
+	color: white;
 }
 
 .composition {
