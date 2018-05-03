@@ -21,7 +21,7 @@ const mongoURL = 'mongodb://localhost/pianodb'
 
 mongoose.connect(process.env.MONGODB_URI || mongoURL);
 
-db.Song.create(['C', 'D', 'E', 'F'])
+db.Song.create([])
 	.then(function(dbSong) {
 		console.log(dbSong);
 	})
