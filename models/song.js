@@ -3,7 +3,9 @@ const Schema = mongoose.Schema;
 
 
 const SongSchema = new Schema({
-	array: Array,
+	tags: [{
+		type: String
+	}],
 
 	date: {
 		type: Date,

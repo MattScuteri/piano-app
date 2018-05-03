@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const logger = require('morgan');
 const mongoose = require('mongoose');
 
 const router = express.Router();
@@ -9,7 +10,8 @@ const db = require('./models');
 
 const app = express();
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(logger('dev'));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
@@ -18,7 +20,7 @@ const mongoURL = 'mongodb://localhost/pianodb'
 
 mongoose.connect(mongoURL);
 
-db.Song.create(req.body)
+db.Song.create(['C', 'D', 'E', 'F'])
 	.then(function(dbSong) {
 		console.log(dbSong);
 	})
@@ -26,8 +28,26 @@ db.Song.create(req.body)
 		console.log(err)
 	})
 //Routing
-router.get('/api', (req, res) => {
-	res.status(200).send({message: 'Hello World!'})
+router.get('/api', function(req, res) {
+	db.Song.find({})
+		.then(function(dbSong) {
+			res.json(dbSong);
+		}).catch(function(err) {
+			res.json(err)
+		})
+})
+
+router.post('/save', function(req, res) {
+	db.Song.create(req.body)
+		.then(function(dbSong) {
+			return db.Song.findOneAndUpdate({}, { $push: { array: dbSong } } );
+		})
+		.then(function(dbSong) {
+			res.json(dbUser);
+		})
+		.catch(function(err) {
+			res.json(err);
+		})
 })
 
 app.use(router);

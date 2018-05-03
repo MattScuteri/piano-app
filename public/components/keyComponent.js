@@ -94,10 +94,12 @@ var NotesCtrl = function($scope, $http) {
 	};
 
 	$scope.save = function() {
-		$http.post('/')
+		$http.post('/save')
 			.then(function(response) {
 				Song: $scope.noteSelected;
-			})
+			});
+
+		$scope.noteSelected = [];
 	}
 
 };
