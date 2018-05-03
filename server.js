@@ -19,7 +19,7 @@ app.use(express.static('public'));
 mongoose.Promise = Promise;
 const mongoURL = 'mongodb://localhost/pianodb'
 
-mongoose.connect(process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || mongoURL);
+mongoose.connect(process.env.MONGODB_URL || mongoURL);
 
 db.Song.create([])
 	.then(function(dbSong) {
