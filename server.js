@@ -19,7 +19,7 @@ app.use(express.static('public'));
 mongoose.Promise = Promise;
 const mongoURL = 'mongodb://localhost/pianodb'
 
-mongoose.connect(process.env.MONGODB_URL || mongoURL);
+mongoose.connect(mongoURL);
 
 db.Song.create([])
 	.then(function(dbSong) {
@@ -53,6 +53,7 @@ router.post('/save', function(req, res) {
 
 app.use(router);
 
-app.listen(PORT);
+app.listen(PORT, function() {
+	console.log('App listening on port ' + PORT);
+});
 
-console.log('App listening on port ' + PORT);
