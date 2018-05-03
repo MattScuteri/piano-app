@@ -14,6 +14,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
+mongoose.Promise = Promise;
+
 const mongoURL = process.env.MONGODB_URI || 'mongodb://localhost/pianodb';
 
 mongoose.connect(mongoURL, function(error) {
