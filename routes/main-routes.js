@@ -1,7 +1,8 @@
 const path = require('path');
+const mongoose = require('mongoose');
+const express = require('express')
+const router = express.Router();
 
 module.exports = function(app) {
-	app.get('/', function(req, res) {
-		res.sendFile(path.join(__dirname, '../views/index.html'))
-	});
+
 }

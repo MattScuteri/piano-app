@@ -1,12 +1,16 @@
-const Sequelize = require('sequelize');
-const sequelize = require('../config/connection.js');
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-module.exports = function(sequelize, Datatypes) {
-	const Song = sequelize.define('Song', {
-		music: {
-			type: Datatypes.STRING
-			}
-		});
 
-	return Song;
-}
+const SongSchema = new Schema({
+	array: Array,
+
+	date: {
+		type: Date,
+		default: Date.now
+	}
+});
+
+const Song = mongoose.model('Song', SongSchema);
+
+module.exports = Song;

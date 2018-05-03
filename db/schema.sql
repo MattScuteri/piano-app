@@ -1,2 +1,0 @@
-DROP DATABASE IF EXISTS `piano_db`;
-CREATE DATABASE `piano_db`;
