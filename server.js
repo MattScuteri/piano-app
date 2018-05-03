@@ -40,7 +40,7 @@ router.get('/api', function(req, res) {
 router.post('/save', function(req, res) {
 	db.Song.create(req.body)
 		.then(function(dbSong) {
-			return db.Song.findOneAndUpdate({}, { $push: { array: dbSong } } );
+			return db.Song.findOneAndUpdate({}, { $push: { tags: dbSong } } );
 		})
 		.then(function(dbSong) {
 			res.json(dbUser);
