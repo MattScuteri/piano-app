@@ -14,6 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
+SET MONGOLAB_URI='mongodb://heroku_5zq9hskb:o60717erss5jrfq54o59a0cmqu@ds113870.mlab.com:13870/heroku_5zq9hskb';
 mongoose.connect('mongodb://localhost/pianodb');
 
 db.Song.create([])
