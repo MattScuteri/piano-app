@@ -4,6 +4,7 @@ const logger = require('morgan');
 const mongoose = require('mongoose');
 
 const router = express.Router();
+
 const PORT = process.env.PORT || 3000;
 
 const db = require('./models');
@@ -18,7 +19,7 @@ app.use(express.static('public'));
 mongoose.Promise = Promise;
 const mongoURL = 'mongodb://localhost/pianodb'
 
-mongoose.connect(mongoURL);
+mongoose.connect(process.env.MONGODB_URI || mongoURL);
 
 db.Song.create(['C', 'D', 'E', 'F'])
 	.then(function(dbSong) {
