@@ -1,3 +1,3 @@
 module.exports = {
-  Song: require('./Song')
+  Song: require('./song')
 };
